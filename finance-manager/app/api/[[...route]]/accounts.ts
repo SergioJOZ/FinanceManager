@@ -136,7 +136,7 @@ const app = new Hono()
         return c.json({ error: "Missing id" }, 400);
       }
 
-      if (!auth) {
+      if (!auth?.userId) {
         return c.json({ error: "Unauthorized" }, 401);
       }
 
@@ -170,7 +170,7 @@ const app = new Hono()
         return c.json({ error: "Missing id" }, 400);
       }
 
-      if (!auth) {
+      if (!auth?.userId) {
         return c.json({ error: "Unauthorized" }, 401);
       }
 
